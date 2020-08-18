@@ -13,7 +13,8 @@ The purpose of the app is to help you decide what to cook today. This is done in
 <h2>Libraries and tools</h2>
 
 <ul>
-<li>ViewModel</li>
-<li>LiveData</li>
-<li>Data Binding</li>
+  <li>ViewModel</li>
+  <li>LiveData</li>
+  <li>Data Binding</li>
+  <li>RoomDb></li>
 </ul>

@@ -1,0 +1,2 @@
+rootProject.name='WhatWillCookToday'
+include ':app'

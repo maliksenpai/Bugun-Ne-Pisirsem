@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+        <variable
+            name="viewModel"
+            type="com.e.whatwillcooktoday.ui.main.MainViewModel" />
+    </data>
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_gravity="center"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_above="@+id/soup"
+                android:textStyle="bold"
+                android:textColor="#000"
+                android:layout_marginBottom="30dp"
+                android:layout_marginLeft="70dp"
+                android:gravity="center"
+                android:text="Çorba" />
+
+            <TextView
+                android:id="@+id/soup"
+                android:gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_marginLeft="70dp"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="TextView" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_above="@+id/mainDish"
+                android:layout_marginBottom="30dp"
+                android:textStyle="bold"
+                android:textColor="#000"
+                android:layout_toRightOf="@+id/soup"
+                android:layout_marginLeft="30dp"
+                android:gravity="center"
+                android:text="Ana Yemek" />
+
+            <TextView
+                android:id="@+id/mainDish"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/soup"
+                android:layout_marginLeft="30dp"
+                android:gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="TextView" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_above="@id/sideDish"
+                android:layout_marginLeft="30dp"
+                android:textStyle="bold"
+                android:textColor="#000"
+                android:layout_marginBottom="30dp"
+                android:layout_toRightOf="@+id/mainDish"
+                android:text="Yan Yemek" />
+
+            <TextView
+                android:id="@+id/sideDish"
+                android:layout_toRightOf="@+id/mainDish"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="30dp"
+                android:gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="TextView" />
+
+            <Button
+                android:id="@+id/refreshbutton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/colorPrimary"
+                android:textColor="#fff"
+                android:layout_below="@id/mainDish"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="20dp"
+                android:onClick="@{(v)-> viewModel.refresh(v)}"
+                android:text="Yenile" />
+        </RelativeLayout>
+
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/floatingActionButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            android:backgroundTint="@color/colorPrimary"
+            android:layout_margin="16dp"
+            android:layout_gravity="bottom|right"
+            android:onClick="@{(v)-> viewModel.addbutton(v)}"
+            android:src="@android:drawable/ic_input_add" />
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+</layout>
